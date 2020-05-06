@@ -1,0 +1,44 @@
+version: "3"
+services:
+  php:
+    build:
+      context: ./docker/php
+    depends_on:
+      - database
+      - mail
+    ports:
+      - 8000:80
+    volumes:
+      - ./src:/var/www
+      - ./logs:/var/log/php
+      - ./docker/php/php.ini:/etc/php.ini
+      - ./docker/php/httpd.conf:/etc/httpd/conf.d/user.conf
+    working_dir: /var/www
+    environment:
+      - DB_HOST=database
+      - DB_DATABASE=postgres
+      - DB_USERNAME=postgres
+      - TZ=Asia/Tokyo
+      - MAIL_HOST=mail
+      - MAIL_PORT=1025
+
+  database:
+    image: postgres:alpine
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./logs:/var/lib/postgresql/log
+      - ./docker/postgres:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    environment:
+      - TZ=Asia/Tokyo
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_INITDB_ARGS="--locale=ja_JP.utf8"
+
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
+
+volumes:
+  database:

@@ -1,0 +1,23 @@
+{
+	"name": "laravel-amazonlinux-postgresql",
+
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+
+	"service": "php",
+
+	"workspaceFolder": "/var/www",
+
+	"settings": { 
+		"terminal.integrated.shell.linux": null
+		"php.suggest.basic": false,
+		"php.validate.enable": false,
+		"intelephense.environment.phpVersion": "7.4.0"
+	},
+
+	"extensions": [
+		"bmewburn.vscode-intelephense-client",
+		"EditorConfig.EditorConfig"
+    ]
+}
