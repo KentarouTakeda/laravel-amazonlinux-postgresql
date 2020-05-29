@@ -22,6 +22,7 @@ services:
       - PGUSER=postgres
       - CACHE_DRIVER=memcached
       - MEMCACHED_HOST=memcached
+      - SESSION_DRIVER=memcached
       - TZ=Asia/Tokyo
       - MAIL_HOST=mail
       - MAIL_PORT=1025
