@@ -18,6 +18,8 @@ services:
       - DB_HOST=database
       - DB_DATABASE=postgres
       - DB_USERNAME=postgres
+      - PGHOST=database
+      - PGUSER=postgres
       - CACHE_DRIVER=memcached
       - MEMCACHED_HOST=memcached
       - TZ=Asia/Tokyo

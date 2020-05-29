@@ -4,7 +4,7 @@ ENV TZ Asia/Tokyo
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN \
-    amazon-linux-extras install epel -y && \
+    amazon-linux-extras install postgresql11 epel -y && \
     yum install -y \
         yum-utils \
         https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
