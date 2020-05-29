@@ -26,5 +26,7 @@ RUN \
     && \
     yum update -y
 
+RUN rm -rf /var/www/*
+
 EXPOSE 80
 CMD /usr/sbin/httpd -T -D FOREGROUND
