@@ -18,6 +18,8 @@ services:
       - DB_HOST=database
       - DB_DATABASE=postgres
       - DB_USERNAME=postgres
+      - CACHE_DRIVER=memcached
+      - MEMCACHED_HOST=memcached
       - TZ=Asia/Tokyo
       - MAIL_HOST=mail
       - MAIL_PORT=1025
@@ -39,6 +41,9 @@ services:
     image: mailhog/mailhog
     ports:
       - 8025:8025
+
+  memcached:
+    image: memcached:latest
 
 volumes:
   database:

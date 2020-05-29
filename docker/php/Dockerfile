@@ -20,6 +20,7 @@ RUN \
         php \
         php-bcmath \
         php-opcache \
+        php-pecl-memcached \
         php-pgsql \
         tar \
     && \
