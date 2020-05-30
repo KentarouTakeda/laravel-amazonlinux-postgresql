@@ -9,15 +9,36 @@
 
 	"workspaceFolder": "/var/www",
 
-	"settings": { 
-		"terminal.integrated.shell.linux": null
+	"settings": {
+		"terminal.integrated.shell.linux": null,
+		"php-cs-fixer.allowRisky": false,
+		"php-cs-fixer.config": "/var/www/.php_cs.dist",
+		"php-cs-fixer.onsave": true,
+		"diffEditor.ignoreTrimWhitespace": false,
 		"php.suggest.basic": false,
 		"php.validate.enable": false,
+		"css.validate": false,
+		"[css]": {
+		  "editor.formatOnSave": false
+		},
+		"scss.validate": false,
+		"[scss]": {
+		  "editor.formatOnSave": false
+		},
+		"postcss.validate": false,
+		"[postcss]": {
+		  "editor.formatOnSave": false
+		},
+		"stylelint.validate": ["css", "scss", "postcss"],
 		"intelephense.environment.phpVersion": "7.4.0"
 	},
 
 	"extensions": [
+		"stylelint.vscode-stylelint",
+		"csstools.postcss",
+		"junstyle.php-cs-fixer",
 		"bmewburn.vscode-intelephense-client",
-		"EditorConfig.EditorConfig"
-    ]
+		"EditorConfig.EditorConfig",
+		"onecentlin.laravel-blade"
+	]
 }

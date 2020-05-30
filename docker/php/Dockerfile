@@ -4,7 +4,7 @@ ENV TZ Asia/Tokyo
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN \
-    amazon-linux-extras install postgresql11 epel -y && \
+    amazon-linux-extras install epel -y && \
     yum install -y \
         yum-utils \
         https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
@@ -25,6 +25,10 @@ RUN \
         tar \
     && \
     yum update -y
+
+RUN rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+RUN sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo
+RUN yum install -y postgresql12
 
 RUN rm -rf /var/www/*
 

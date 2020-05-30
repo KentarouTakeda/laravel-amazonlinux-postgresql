@@ -12,12 +12,12 @@
 
 ## インストール（Laravel初期状態）
 
-> */var/www/PROJECT* ではなく */var/www/* にプロジェクトを作成  
+> \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトを作成  
 > *container $* composer create-project laravel/laravel . --prefer-dist
 
 ## インストール（既存のリポジトリをclone）
 
-> */var/www/PROJECT* ではなく */var/www/* にプロジェクトをclone  
+> \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトをclone  
 > *container $* git clone *URL* .  
 
 ## 初期設定（パーミッション設定）
@@ -28,3 +28,7 @@
 
 > *container $* psql
 
+## URL
+
+ Laravel : http://localhost:8000/  
+ MailHog : http://localhost:8025/  
