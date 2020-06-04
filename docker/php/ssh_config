@@ -1,0 +1,8 @@
+Compression yes
+NumberOfPasswordPrompts 1
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null
+LogLevel ERROR
+ForwardAgent yes
+CheckHostIP no
+PasswordAuthentication no

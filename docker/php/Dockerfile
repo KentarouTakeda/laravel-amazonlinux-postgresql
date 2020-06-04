@@ -32,6 +32,9 @@ RUN yum install -y postgresql12
 
 RUN rm -rf /var/www/*
 ENV PATH $PATH:vendor/bin:node_modules/.bin
+RUN mkdir ~/.ssh
+COPY ssh_config /root/.ssh/config
+RUN chmod 600 /root/.ssh/config
 
 EXPOSE 80
 CMD /usr/sbin/httpd -T -D FOREGROUND
