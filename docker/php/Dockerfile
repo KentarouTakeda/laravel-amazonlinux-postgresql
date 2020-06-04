@@ -31,6 +31,7 @@ RUN sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo
 RUN yum install -y postgresql12
 
 RUN rm -rf /var/www/*
+ENV PATH $PATH:vendor/bin:node_modules/.bin
 
 EXPOSE 80
 CMD /usr/sbin/httpd -T -D FOREGROUND
