@@ -34,11 +34,13 @@
     },
 
     "extensions": [
-        "stylelint.vscode-stylelint",
-        "csstools.postcss",
-        "junstyle.php-cs-fixer",
-        "bmewburn.vscode-intelephense-client",
         "EditorConfig.EditorConfig",
-        "onecentlin.laravel-blade"
+        "bmewburn.vscode-intelephense-client",
+        "csstools.postcss",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "junstyle.php-cs-fixer",
+        "onecentlin.laravel-blade",
+        "stylelint.vscode-stylelint"
     ]
 }
