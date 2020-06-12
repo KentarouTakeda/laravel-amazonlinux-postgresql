@@ -8,7 +8,7 @@ services:
       - mail
       - memcached
     ports:
-      - 8000:80
+      - ${PORT_WEB_APP:-8000}:80
     volumes:
       - php:/var/www
       - ./logs:/var/log/php
@@ -37,7 +37,7 @@ services:
       - ./logs:/var/lib/postgresql/log
       - ./docker/postgres:/docker-entrypoint-initdb.d
     ports:
-      - 5432:5432
+      - ${PORT_PGSQL:-5432}:5432
     environment:
       - TZ=Asia/Tokyo
       - POSTGRES_HOST_AUTH_METHOD=trust
@@ -46,7 +46,7 @@ services:
   mail:
     image: mailhog/mailhog
     ports:
-      - 8025:8025
+      - ${PORT_WEB_MAIL:-8025}:8025
 
   memcached:
     image: memcached:latest
