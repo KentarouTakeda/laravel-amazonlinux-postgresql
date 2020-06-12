@@ -23,6 +23,7 @@ RUN \
         php-pecl-memcached \
         php-pgsql \
         tar \
+        unzip \
     && \
     yum update -y
 
