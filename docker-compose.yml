@@ -16,6 +16,8 @@ services:
       - ./docker/php/httpd.conf:/etc/httpd/conf.d/user.conf
     working_dir: /var/www
     environment:
+      - APP_ENV=${APP_ENV:-local}
+      - APP_DEBUG=${APP_DEBUG:-true}
       - DB_CONNECTION=pgsql
       - DB_HOST=database
       - DB_PORT=5432
