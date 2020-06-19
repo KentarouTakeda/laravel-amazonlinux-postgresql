@@ -28,6 +28,10 @@
 
 > *container $* psql
 
+or
+
+> host $  docker-compose exec database psql
+
 ## .env
 
 * APP_ENV  

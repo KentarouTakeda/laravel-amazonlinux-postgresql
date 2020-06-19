@@ -42,6 +42,7 @@ services:
       - ${PORT_PGSQL:-5432}:5432
     environment:
       - TZ=Asia/Tokyo
+      - PGUSER=postgres
       - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_INITDB_ARGS="--locale=ja_JP.utf8"
 
