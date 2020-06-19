@@ -28,7 +28,19 @@
 
 > *container $* psql
 
+## .env
+
+* APP_ENV  
+    Laravel
+* APP_DEBUG  
+    Laravel
+* PORT_WEB_APP  
+    アプリ（Laravel）の公開ポート
+* PORT_PGSQL  
+    PostgreSQLの公開ポート
+* PORT_WEB_MAIL  
+    MailHogの公開ポート
+
 ## URL
 
- Laravel : http://localhost:8000/  
- MailHog : http://localhost:8025/  
+ Laravel : http://localhost:8000/ （デフォルト設定の場合）  
