@@ -48,3 +48,4 @@ or
 ## URL
 
  Laravel : http://localhost:8000/ （デフォルト設定の場合）  
+ MailHog : http://localhost:8025/ （デフォルト設定の場合）  
