@@ -31,6 +31,8 @@ services:
       - TZ=Asia/Tokyo
       - MAIL_HOST=mail
       - MAIL_PORT=1025
+      - LANG=C.UTF-8
+      - LANGUAGE=en_US
 
   database:
     image: postgres:alpine
