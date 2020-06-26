@@ -10,6 +10,7 @@
     "workspaceFolder": "/var/www",
 
     "settings": {
+        "editor.renderWhitespace": "boundary",
         "terminal.integrated.shell.linux": null,
         "php-cs-fixer.allowRisky": false,
         "php-cs-fixer.config": "/var/www/.php_cs.dist",
