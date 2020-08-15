@@ -55,6 +55,15 @@ services:
   memcached:
     image: memcached:latest
 
+  phppgadmin:
+    image: bitnami/phppgadmin
+    ports:
+      - ${PORT_WEB_PHPPGADMIN:-8432}:8080
+    environment:
+      DATABASE_HOST: database
+    depends_on:
+      - database
+
 volumes:
   database:
   php:
