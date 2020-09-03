@@ -11,7 +11,6 @@ services:
       - ${PORT_WEB_APP:-8000}:80
     volumes:
       - php:/var/www
-      - ./logs:/var/log/php
       - ./docker/php/php.ini:/etc/php.ini
       - ./docker/php/httpd.conf:/etc/httpd/conf.d/user.conf
     working_dir: /var/www
@@ -37,7 +36,6 @@ services:
     image: postgres:alpine
     volumes:
       - database:/var/lib/postgresql/data
-      - ./logs:/var/lib/postgresql/log
       - ./docker/postgres:/docker-entrypoint-initdb.d
     ports:
       - ${PORT_PGSQL:-5432}:5432
