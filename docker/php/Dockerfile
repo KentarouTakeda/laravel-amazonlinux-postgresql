@@ -21,7 +21,6 @@ RUN \
         php-bcmath \
         php-opcache \
         php-pecl-memcached \
-        php-pecl-xdebug \
         php-pgsql \
         tar \
         unzip \

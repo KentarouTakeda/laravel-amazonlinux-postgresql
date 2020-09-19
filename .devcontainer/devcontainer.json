@@ -42,7 +42,6 @@
         "csstools.postcss",
         "donjayamanne.githistory",
         "eamodio.gitlens",
-        "felixfbecker.php-debug",
         "junstyle.php-cs-fixer",
         "onecentlin.laravel-blade",
         "stylelint.vscode-stylelint"
