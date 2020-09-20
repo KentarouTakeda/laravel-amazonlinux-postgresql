@@ -22,15 +22,3 @@ echo 'shared_buffers = 512MB' >> $CONF
 
 sed -i -e"s/^work_mem = .*//" $CONF
 echo 'work_mem = 32MB' >> $CONF
-
-sed -i -e"s/^logging_collector = .*//" $CONF
-echo 'logging_collector = true' >> $CONF
-
-sed -i -e"s/^log_directory = .*//" $CONF
-echo "log_directory = '/var/lib/postgresql/log'" >> $CONF
-
-sed -i -e"s/^log_filename = .*//" $CONF
-echo "log_filename = 'postgresql.log'" >> $CONF
-
-mkdir /var/lib/postgresql/log || true
-chown postgres:postgres /var/lib/postgresql/log
