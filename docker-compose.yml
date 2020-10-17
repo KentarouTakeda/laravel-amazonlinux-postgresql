@@ -53,12 +53,12 @@ services:
   memcached:
     image: memcached:latest
 
-  phppgadmin:
-    image: bitnami/phppgadmin
+  cloudbeaver:
+    image: dbeaver/cloudbeaver
     ports:
-      - ${PORT_WEB_PHPPGADMIN:-8432}:8080
-    environment:
-      DATABASE_HOST: database
+      - ${PORT_WEB_PHPPGADMIN:-8432}:8978
+    volumes:
+      - ./docker/cloudbeaver/data-sources.json:/opt/cloudbeaver/workspace/GlobalConfiguration/.dbeaver/data-sources.json
     depends_on:
       - database
 

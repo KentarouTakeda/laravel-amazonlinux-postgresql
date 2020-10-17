@@ -1,0 +1,18 @@
+{
+    "folders": {},
+    "connections": {
+        "database": {
+            "provider": "postgresql",
+            "driver": "postgres-jdbc",
+            "name": "database",
+            "save-password": true,
+            "read-only": false,
+            "configuration": {
+                "host": "database",
+                "port": "5432",
+                "database": "postgres",
+                "user": "postgres"
+            }
+        }
+    }
+}
