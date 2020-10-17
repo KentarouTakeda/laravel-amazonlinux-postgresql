@@ -36,6 +36,8 @@ ENV PATH $PATH:vendor/bin:node_modules/.bin
 RUN mkdir ~/.ssh
 COPY ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config
+RUN yum clean all
+RUN composer clear-cache
 
 EXPOSE 80
 CMD /usr/sbin/httpd -T -D FOREGROUND
