@@ -17,9 +17,11 @@ RUN \
         nodejs \
         php \
         php-bcmath \
+        php-mbstring \
         php-opcache \
         php-pecl-memcached \
         php-pgsql \
+        php-xml \
         tar \
         unzip \
         util-linux-user \
