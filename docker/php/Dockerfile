@@ -6,7 +6,7 @@ RUN \
     amazon-linux-extras install epel -y && \
     yum install -y \
         yum-utils \
-        https://rpm.nodesource.com/pub_12.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
+        https://rpm.nodesource.com/pub_14.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
         https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && \
     yum-config-manager --enable remi-php74 && \
