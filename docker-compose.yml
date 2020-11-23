@@ -1,6 +1,7 @@
 version: "3"
 services:
   php:
+    user: apache
     build:
       context: ./docker/php
     depends_on:
@@ -8,11 +9,11 @@ services:
       - mail
       - memcached
     ports:
-      - ${PORT_WEB_APP:-8000}:80
+      - ${PORT_WEB_APP:-8000}:8080
     volumes:
       - php:/var/www
       - ./docker/php/php.ini:/etc/php.ini
-      - ./docker/php/httpd.conf:/etc/httpd/conf.d/user.conf
+      - ./docker/php/httpd.conf:/etc/httpd/conf/httpd.conf
     working_dir: /var/www
     environment:
       - APP_DEBUG=${APP_DEBUG:-true}

@@ -1,7 +1,6 @@
 FROM amazonlinux:latest
 
 ENV TZ Asia/Tokyo
-ENV COMPOSER_ALLOW_SUPERUSER 1
 
 RUN \
     amazon-linux-extras install epel -y && \
@@ -24,6 +23,7 @@ RUN \
         php-pgsql \
         tar \
         unzip \
+        util-linux-user \
     && \
     yum update -y
 
@@ -33,11 +33,10 @@ RUN yum install -y postgresql13
 
 RUN rm -rf /var/www/*
 ENV PATH $PATH:vendor/bin:node_modules/.bin
-RUN mkdir ~/.ssh
-COPY ssh_config /root/.ssh/config
-RUN chmod 600 /root/.ssh/config
-RUN yum clean all
-RUN composer clear-cache
+COPY ssh_config /etc/ssh/ssh_config
 
-EXPOSE 80
+RUN chown apache:apache /usr/share/httpd /var/www
+RUN chmod g+s /usr/share/httpd /var/www
+RUN chsh -s /usr/bin/bash apache
+
 CMD /usr/sbin/httpd -T -D FOREGROUND
