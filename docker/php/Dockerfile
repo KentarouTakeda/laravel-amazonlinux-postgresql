@@ -11,7 +11,10 @@ RUN \
     && \
     yum-config-manager --enable remi-php80 && \
     yum-config-manager --setopt="remi-php80.priority=5" --save && \
+    yum-config-manager --enable remi && \
+    yum-config-manager --setopt="remi.priority=5" --save && \
     yum install -y \
+        composer \
         git \
         httpd \
         nmap-ncat \
@@ -28,9 +31,6 @@ RUN \
         util-linux-user \
     && \
     yum update -y
-
-RUN curl -sS https://getcomposer.org/composer-stable.phar -o /usr/bin/composer \
-    && chmod +x /usr/bin/composer
 
 RUN rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 RUN sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo
