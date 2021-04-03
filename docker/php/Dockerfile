@@ -45,4 +45,7 @@ RUN chown apache:apache /usr/share/httpd /var/www
 RUN chmod g+s /usr/share/httpd /var/www
 RUN chsh -s /usr/bin/bash apache
 
+RUN npm i -g npm
+RUN rm -rf /root/.npm /root/.config
+
 CMD /usr/sbin/httpd -T -D FOREGROUND
