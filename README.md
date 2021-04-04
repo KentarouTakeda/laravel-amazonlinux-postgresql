@@ -2,7 +2,7 @@
 
 ## 接続（ターミナル）
 
-> *host $* docker-composer up -d  
+> *host $* docker-compose up -d  
 > *host $* docker-compose exec php bash  
 
 ## 接続（VSCode）
