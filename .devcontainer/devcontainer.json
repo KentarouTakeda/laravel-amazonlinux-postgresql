@@ -33,7 +33,7 @@
         "stylelint.validate": ["css", "scss", "postcss"],
         "emmet.triggerExpansionOnTab": true,
         "blade.format.enable": true,
-        "intelephense.environment.phpVersion": "7.4.0"
+        "intelephense.environment.phpVersion": "8.0.0"
     },
 
     "extensions": [
