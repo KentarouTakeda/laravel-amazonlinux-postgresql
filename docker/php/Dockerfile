@@ -13,6 +13,7 @@ RUN \
     yum-config-manager --setopt="remi-php80.priority=5" --save && \
     yum-config-manager --enable remi && \
     yum-config-manager --setopt="remi.priority=5" --save && \
+    yum install --disablerepo=amzn2-core libzstd -y && \
     yum install -y \
         composer \
         git \
