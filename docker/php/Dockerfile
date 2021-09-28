@@ -31,12 +31,11 @@ RUN \
         unzip \
         util-linux-user \
     && \
-    yum update -y
-
-RUN rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-RUN sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo
-RUN yum install -y postgresql13
-RUN yum clean all
+    yum update -y && \
+    rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
+    sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo && \
+    yum install -y postgresql13 && \
+    yum clean all
 
 RUN rm -rf /var/www/*
 ENV PATH $PATH:vendor/bin:node_modules/.bin
@@ -46,7 +45,7 @@ RUN chown apache:apache /usr/share/httpd /var/www
 RUN chmod g+s /usr/share/httpd /var/www
 RUN chsh -s /usr/bin/bash apache
 
-RUN npm i -g npm
-RUN rm -rf /root/.npm /root/.config
+RUN npm i -g npm && \
+    rm -rf /root/.npm /root/.config
 
 CMD /usr/sbin/httpd -T -D FOREGROUND
