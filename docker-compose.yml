@@ -18,6 +18,7 @@ services:
     environment:
       - APP_DEBUG=${APP_DEBUG:-true}
       - APP_KEY=${APP_DEBUG:-_DUMMYDUMMYDUMMYDUMMYDUMMYDUMMY_}
+      - APP_ENV=local
       - DB_CONNECTION=pgsql
       - DB_HOST=database
       - DB_PORT=5432
