@@ -43,6 +43,7 @@
         "donjayamanne.githistory",
         "eamodio.gitlens",
         "junstyle.php-cs-fixer",
+        "levacic.vscode-phpstan",
         "onecentlin.laravel-blade",
         "ryannaddy.laravel-artisan",
         "stylelint.vscode-stylelint"
