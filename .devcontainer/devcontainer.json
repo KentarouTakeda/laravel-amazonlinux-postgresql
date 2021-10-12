@@ -46,6 +46,7 @@
         "levacic.vscode-phpstan",
         "onecentlin.laravel-blade",
         "ryannaddy.laravel-artisan",
+        "shufo.vscode-blade-formatter",
         "stylelint.vscode-stylelint"
     ]
 }
