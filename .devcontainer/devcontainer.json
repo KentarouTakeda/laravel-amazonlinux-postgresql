@@ -19,6 +19,10 @@
         "php.suggest.basic": false,
         "php.validate.enable": false,
         "css.validate": false,
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true
+        },
         "[css]": {
           "editor.formatOnSave": false
         },
@@ -42,6 +46,7 @@
         "csstools.postcss",
         "donjayamanne.githistory",
         "eamodio.gitlens",
+        "esbenp.prettier-vscode",
         "junstyle.php-cs-fixer",
         "levacic.vscode-phpstan",
         "onecentlin.laravel-blade",
