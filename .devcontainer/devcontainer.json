@@ -12,11 +12,9 @@
     "settings": {
         "editor.renderWhitespace": "boundary",
         "php-cs-fixer.allowRisky": false,
-        "php-cs-fixer.config": "/var/www/vendor/bin/php-cs-fixer",
-        "php-cs-fixer.onsave": true,
+        "php-cs-fixer.config": "${workspaceFolder}/.php-cs-fixer.dist.php",
         "[php]": {
-          "editor.defaultFormatter": "junstyle.php-cs-fixer",
-          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "junstyle.php-cs-fixer"
         },
         "diffEditor.ignoreTrimWhitespace": false,
         "php.suggest.basic": false,
