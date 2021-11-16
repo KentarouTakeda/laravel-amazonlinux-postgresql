@@ -32,6 +32,13 @@ or
 
 > host $  docker-compose exec database psql
 
+## ER図の出力
+
+> docker compose -f docker-compose.yml -f docker-compose.schemaspy.yml run schemaspy
+
+* Laravelのセットアップ（マイグレーションまで）を終えた後に実行可能
+* *schema/* ディレクトリ配下にER図が出力される
+
 ## .env
 
 * APP_ENV  

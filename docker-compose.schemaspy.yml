@@ -1,0 +1,9 @@
+version: "3"
+services:
+  schemaspy:
+    image: schemaspy/schemaspy:6.1.0
+    volumes:
+      - ./schema:/output
+    command: -t pgsql -host database:5432 -db postgres -u postgres
+    depends_on:
+      - database
