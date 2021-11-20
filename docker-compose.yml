@@ -10,6 +10,7 @@ services:
       - memcached
     ports:
       - ${PORT_WEB_APP:-8000}:8080
+      - ${PORT_BROWSERSYNC:-3000}:${PORT_BROWSERSYNC:-3000}
     volumes:
       - php:/var/www
       - ./docker/php/php.ini:/etc/php.ini
