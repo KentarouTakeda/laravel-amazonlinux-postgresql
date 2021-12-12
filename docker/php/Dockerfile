@@ -9,8 +9,8 @@ RUN \
         https://rpm.nodesource.com/pub_16.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm \
         https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && \
-    yum-config-manager --enable remi-php80 && \
-    yum-config-manager --setopt="remi-php80.priority=5" --save && \
+    yum-config-manager --enable remi-php81 && \
+    yum-config-manager --setopt="remi-php81.priority=5" --save && \
     yum-config-manager --enable remi && \
     yum-config-manager --setopt="remi.priority=5" --save && \
     yum install --disablerepo=amzn2-core libzstd -y && \
