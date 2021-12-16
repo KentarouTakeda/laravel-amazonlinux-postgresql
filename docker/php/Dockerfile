@@ -34,7 +34,7 @@ RUN \
     yum update -y && \
     rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
     sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo && \
-    yum install -y postgresql13 && \
+    yum install -y postgresql14 && \
     yum clean all
 
 RUN rm -rf /var/www/*
