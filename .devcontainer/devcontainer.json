@@ -39,7 +39,21 @@
         "stylelint.validate": ["css", "scss", "postcss"],
         "emmet.triggerExpansionOnTab": true,
         "blade.format.enable": true,
-        "intelephense.environment.phpVersion": "8.1.0"
+        "intelephense.environment.phpVersion": "8.1.0",
+        "intelephense.files.exclude": [
+            "**/.git/**",
+            "**/.svn/**",
+            "**/.hg/**",
+            "**/CVS/**",
+            "**/.DS_Store/**",
+            "**/node_modules/**",
+            "**/bower_components/**",
+            "**/vendor/**/{Tests,tests}/**",
+            "**/.history/**",
+            "**/vendor/**/vendor/**",
+            "bootstrap/cache/**",
+            "storage/framework/views/**"
+        ]
     },
 
     "extensions": [
