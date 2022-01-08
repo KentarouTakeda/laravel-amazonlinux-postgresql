@@ -51,8 +51,8 @@
             "**/vendor/**/{Tests,tests}/**",
             "**/.history/**",
             "**/vendor/**/vendor/**",
-            "bootstrap/cache/**",
-            "storage/framework/views/**"
+            "/bootstrap/cache/**",
+            "/storage/**"
         ]
     },
 
