@@ -9,7 +9,7 @@ services:
       - mail
       - memcached
     ports:
-      - ${PORT_WEB_APP:-8000}:8080
+      - ${PORT_WEB_APP:-8000}:8000
       - ${PORT_BROWSERSYNC:-3000}:${PORT_BROWSERSYNC:-3000}
     volumes:
       - php:/var/www
