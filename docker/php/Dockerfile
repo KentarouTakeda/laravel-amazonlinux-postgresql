@@ -24,6 +24,7 @@ RUN \
         php-bcmath \
         php-mbstring \
         php-opcache \
+        php-pecl-pcov \
         php-pecl-memcached \
         php-pgsql \
         php-xml \
