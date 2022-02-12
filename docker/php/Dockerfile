@@ -22,6 +22,7 @@ RUN \
         nodejs \
         php \
         php-bcmath \
+        php-gd \
         php-mbstring \
         php-opcache \
         php-pecl-pcov \
