@@ -37,7 +37,9 @@ RUN \
     rpm -ivh --nodeps https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
     sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo && \
     yum install -y postgresql14 && \
-    yum clean all
+    yum clean all && \
+    npm i -g npm && \
+    rm -rf /root/.npm /root/.config
 
 RUN rm -rf /var/www/*
 ENV PATH $PATH:vendor/bin:node_modules/.bin
@@ -46,8 +48,5 @@ COPY ssh_config /etc/ssh/ssh_config
 RUN chown apache:apache /usr/share/httpd /var/www
 RUN chmod g+s /usr/share/httpd /var/www
 RUN chsh -s /usr/bin/bash apache
-
-RUN npm i -g npm && \
-    rm -rf /root/.npm /root/.config
 
 CMD /usr/sbin/httpd -T -D FOREGROUND
