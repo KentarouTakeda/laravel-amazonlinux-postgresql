@@ -49,4 +49,4 @@ RUN \
 ENV PATH $PATH:vendor/bin:node_modules/.bin
 COPY ssh_config /etc/ssh/ssh_config
 
-CMD /usr/sbin/httpd -T -D FOREGROUND
+CMD ["/usr/sbin/httpd", "-T", "-D", "FOREGROUND"]
