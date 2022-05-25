@@ -38,6 +38,7 @@ RUN \
     sed -i 's/\$releasever/7/g' /etc/yum.repos.d/pgdg-redhat-all.repo && \
     yum install -y postgresql14 && \
     yum clean all && \
+    rm -rf /var/cache/yum && \
     npm i -g npm && \
     rm -rf /root/.npm /root/.config
 
