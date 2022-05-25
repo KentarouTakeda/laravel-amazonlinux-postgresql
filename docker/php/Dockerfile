@@ -40,14 +40,13 @@ RUN \
     yum clean all && \
     rm -rf /var/cache/yum && \
     npm i -g npm && \
-    rm -rf /root/.npm /root/.config
+    rm -rf /root/.npm /root/.config && \
+    rm -rf /var/www/* && \
+    chown apache:apache /usr/share/httpd /var/www && \
+    chmod g+s /usr/share/httpd /var/www && \
+    chsh -s /usr/bin/bash apache
 
-RUN rm -rf /var/www/*
 ENV PATH $PATH:vendor/bin:node_modules/.bin
 COPY ssh_config /etc/ssh/ssh_config
-
-RUN chown apache:apache /usr/share/httpd /var/www
-RUN chmod g+s /usr/share/httpd /var/www
-RUN chsh -s /usr/bin/bash apache
 
 CMD /usr/sbin/httpd -T -D FOREGROUND
