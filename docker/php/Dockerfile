@@ -25,8 +25,8 @@ RUN \
         php-gd \
         php-mbstring \
         php-opcache \
-        php-pecl-pcov \
         php-pecl-memcached \
+        php-pecl-pcov \
         php-pgsql \
         php-xml \
         tar \
