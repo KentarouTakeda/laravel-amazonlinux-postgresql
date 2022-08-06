@@ -6,38 +6,36 @@
 * このリポジトリをワークスペースとして開く
 * コマンドパレットより *Remote-Containers: Reopen in Container* を実行
 
-## インストール（既存のリポジトリをclone）
+## セットアップ（初回のみ）
 
-> \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトをclone  
-> *container $* git clone *URL* **./**
+> \# *URL* には対象プロジェクトのリポジトリURLを指定  
+> *container $* git clone *URL* **./**  
+> *container $* npm install  
+> *container $* composer install  
 
-*URL* には対象プロジェクトのリポジトリURLを指定
 
-## ER図の出力
+## ER図の出力（セットアップ後実行可能）
 
 > *host $* docker compose -f docker-compose.yml -f docker-compose.schemaspy.yml run --rm schemaspy
 
-* Laravelのセットアップ（マイグレーションまで）を終えた後に実行可能
 * *schema/* ディレクトリ配下にER図が出力される
-
-## .env
-
-* APP_ENV  
-    Laravel
-* APP_DEBUG  
-    Laravel
-* PORT_WEB_APP  
-    アプリ（Laravel）の公開ポート
-* PORT_PGSQL  
-    PostgreSQLの公開ポート
-* PORT_WEB_PHPPGADMIN  
-    phpPgAdminの公開ポート
-* PORT_WEB_MAIL  
-    MailHogの公開ポート
 
 ## URL
 
- Laravel : http://localhost:8000/ （デフォルト設定の場合）  
- MailHog : http://localhost:8025/ （デフォルト設定の場合）  
- phpPgAdmin : http://localhost:8432/  （デフォルト設定の場合）  
-     ユーザー名 : `postgres` / パスワード : *（入力不要）*
+|アプリケーション|URL|備考|
+|-|-|-|
+|Laravel|http://localhost:8000/|-|
+|MailHog|http://localhost:8025/|-|
+|phpPgAdmin|http://localhost:8432/| `postgres` / *（入力不要）*|
+
+## .env によるカスタマイズ（任意）
+
+|環境変数|意味|デフォルト|
+|-|-|-|
+|APP_DEBUG|Laravel設定|true|
+|PORT_WEB_APP|公開ポート / Laravel|8000|
+|PORT_PGSQL|公開ポート / PostgreSQL|5432|
+|PORT_WEB_PHPPGADMIN|公開ポート / phpPgAdmin|8432|
+|PORT_WEB_MAIL|公開ポート / MailHog|8025|
+|PORT_BROWSERSYNC|公開ポート / Browsersync|3000|
+
