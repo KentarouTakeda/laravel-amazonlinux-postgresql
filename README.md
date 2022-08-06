@@ -2,15 +2,16 @@
 
 ## 接続（VSCode）
 
+* [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) をインストール
 * このリポジトリをワークスペースとして開く
 * コマンドパレットより *Remote-Containers: Reopen in Container* を実行
 
 ## インストール（既存のリポジトリをclone）
 
 > \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトをclone  
-> *container $* git clone *URL* .  
+> *container $* git clone *URL* **./**
 
-*URL* には対象プロジェクトのgitリポジトリを指定
+*URL* には対象プロジェクトのリポジトリURLを指定
 
 ## ER図の出力
 
