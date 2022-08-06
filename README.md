@@ -1,40 +1,20 @@
 # laravel-amazonlinux-postgresql
 
-## 接続（ターミナル）
-
-> *host $* docker-compose up -d  
-> *host $* docker-compose exec php bash  
-
 ## 接続（VSCode）
 
 * このリポジトリをワークスペースとして開く
 * コマンドパレットより *Remote-Containers: Reopen in Container* を実行
-
-## インストール（Laravel初期状態）
-
-> \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトを作成  
-> *container $* composer create-project laravel/laravel . --prefer-dist
 
 ## インストール（既存のリポジトリをclone）
 
 > \# */var/www/PROJECT* ではなく */var/www/* にプロジェクトをclone  
 > *container $* git clone *URL* .  
 
-## 初期設定（パーミッション設定）
-
-> *container $* chmod ugo+w -R storage bootstrap/cache
-
-## データベースへの接続
-
-> *container $* psql
-
-or
-
-> host $  docker-compose exec database psql
+*URL* には対象プロジェクトのgitリポジトリを指定
 
 ## ER図の出力
 
-> docker compose -f docker-compose.yml -f docker-compose.schemaspy.yml run --rm schemaspy
+> *host $* docker compose -f docker-compose.yml -f docker-compose.schemaspy.yml run --rm schemaspy
 
 * Laravelのセットアップ（マイグレーションまで）を終えた後に実行可能
 * *schema/* ディレクトリ配下にER図が出力される
