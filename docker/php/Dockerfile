@@ -18,6 +18,7 @@ RUN \
         composer \
         git \
         httpd \
+        jq \
         nmap-ncat \
         nodejs \
         php \
