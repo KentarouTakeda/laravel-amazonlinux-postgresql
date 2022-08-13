@@ -44,7 +44,7 @@ services:
       - database:/var/lib/postgresql/data
       - ./docker/postgres:/docker-entrypoint-initdb.d
     ports:
-      - ${PORT_PGSQL:-5432}:5432
+      - ${PORT_PGSQL:-0}:5432
     environment:
       - TZ=Asia/Tokyo
       - PGUSER=postgres
