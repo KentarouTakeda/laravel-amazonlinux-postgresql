@@ -7,7 +7,6 @@ services:
     depends_on:
       - database
       - mail
-      - memcached
     ports:
       - ${PORT_WEB_APP:-8000}:8000
       - ${PORT_BROWSERSYNC:-3000}:${PORT_BROWSERSYNC:-3000}
@@ -28,9 +27,8 @@ services:
       - DB_USERNAME=postgres
       - PGHOST=database
       - PGUSER=postgres
-      - CACHE_DRIVER=memcached
-      - MEMCACHED_HOST=memcached
-      - SESSION_DRIVER=memcached
+      - CACHE_DRIVER=apc
+      - SESSION_DRIVER=apc
       - TZ=Asia/Tokyo
       - MAIL_HOST=mail
       - MAIL_PORT=1025
@@ -55,9 +53,6 @@ services:
     image: mailhog/mailhog
     ports:
       - ${PORT_WEB_MAIL:-8025}:8025
-
-  memcached:
-    image: memcached:latest
 
   phppgadmin:
     image: bitnami/phppgadmin

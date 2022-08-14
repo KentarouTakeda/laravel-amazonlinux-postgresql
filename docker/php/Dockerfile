@@ -26,7 +26,7 @@ RUN \
         php-gd \
         php-mbstring \
         php-opcache \
-        php-pecl-memcached \
+        php-pecl-apcu \
         php-pecl-pcov \
         php-pgsql \
         php-xml \
