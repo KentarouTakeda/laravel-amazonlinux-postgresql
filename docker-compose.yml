@@ -47,7 +47,6 @@ services:
       - TZ=Asia/Tokyo
       - PGUSER=postgres
       - POSTGRES_HOST_AUTH_METHOD=trust
-      - POSTGRES_INITDB_ARGS="--locale=ja_JP.utf8"
 
   mail:
     image: mailhog/mailhog
