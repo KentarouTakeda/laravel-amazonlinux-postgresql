@@ -43,8 +43,9 @@ RUN \
     npm i -g npm && \
     rm -rf /root/.npm /root/.config && \
     rm -rf /var/www/* && \
-    chown apache:apache /usr/share/httpd /var/www && \
     chmod g+s /usr/share/httpd /var/www && \
+    touch /usr/share/httpd/.bashrc && \
+    chown -R apache:apache /usr/share/httpd /var/www && \
     chsh -s /usr/bin/bash apache
 
 ENV PATH $PATH:vendor/bin:node_modules/.bin
