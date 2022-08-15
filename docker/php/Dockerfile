@@ -44,7 +44,8 @@ RUN \
     rm -rf /root/.npm /root/.config && \
     rm -rf /var/www/* && \
     chmod g+s /usr/share/httpd /var/www && \
-    touch /usr/share/httpd/.bashrc && \
+    curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o /etc/bash_completion.d/git-completion.bash && \
+    echo 'source /etc/bash_completion.d/git-completion.bash' > /usr/share/httpd/.bashrc && \
     chown -R apache:apache /usr/share/httpd /var/www && \
     chsh -s /usr/bin/bash apache
 
