@@ -12,6 +12,7 @@
 > *container $* git clone *URL* **./**  
 > *container $* npm install  
 > *container $* composer install  
+> *container $* ./artisan migrate:fresh --seed  
 
 
 ## ER図の出力（セットアップ後実行可能）
