@@ -15,7 +15,7 @@
 > *container $* ./artisan migrate:fresh --seed  
 
 
-## ER図の出力（セットアップ後実行可能）
+## ER図の出力
 
 > *host $* docker compose -f docker-compose.yml -f docker-compose.schemaspy.yml run --rm schemaspy
 
