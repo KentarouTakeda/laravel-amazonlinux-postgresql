@@ -1,4 +1,8 @@
+This repository is no longer maintained. Please use [KentarouTakeda/laravel-docker](https://github.com/KentarouTakeda/laravel-docker).
+
+このリポジトリはメンテナンスされていません。[KentarouTakeda/laravel-docker](https://github.com/KentarouTakeda/laravel-docker)を使って下さい。
 # laravel-amazonlinux-postgresql
+
 
 ## 接続（VSCode）
 
